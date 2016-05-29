@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+
+@import "variables", "mixin", "grid", "common";
+@for $i from 1 to 12 {
+  .grid-bg-#{$i} {
+    background: nth($bg_vars,$i);
+  }
+}
+@for $i from 1 to 12 {
+  .grid-icon-#{$i} {
+    background: nth($bg_vars,$i);
+  }
+}
+
+.index-grid article a{
+  width:180px;
+  height: 180px;
+  padding:20px;
+}
+
+.index-grid article a span{
+  width:100%;
+  height:100%;
+}
+.index-grid article a ins{
+  left: 50%;
+  top: 35px;
+  margin-left: -40px;
+  font-size: 80px;
+}
+.index-grid article a strong{
+  font-size: 18px;
+  bottom: 40px;
+  left: 40%;
+}
+
+.detail{
+  h1{
+    font-size:18px;
+    line-height: 25px;
+  }
+  .info{
+    span{
+      width: 50%;
+    }
+    margin:10px 0;
+    ::before{
+      @include clearfix;
+    }
+  }
+  .tags{
+    margin-top:10px;
+    a{
+      margin-right:5px;
+      line-height: 10px;
+      height:10px;
+      padding:10px 10px 0;
+    }
+  }
+  .content{
+    border-top:1px dashed #ccc;
+    padding:5px 0px 50px 0;
+    margin:10px -10px;
+    line-height: 25px;
+    display: table;
+    p{
+      margin:16px 0;
+    }
+    strong{
+      font-size:14px;
+    }
+  }
+  .half-img{
+    float: left;
+    width: 23.9%;
+    margin: 5px 2px 0;
+    height: 50px;
+    overflow: hidden;
+  }
+}
+//.tabs-icon-top.tabs-top>.tabs.tab-nav{
+//  top:90.8%;
+//  border-top:1px solid #ccc;
+//}
+//@media not all, (-webkit-min-device-pixel-ratio: 1), not all, (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+//  .tabs {
+//    border-top: 1px solid #ccc !important;
+//  }
+//}
+section.half{
+  float:left;
+  width:50%;
+  margin:10px auto;
+  min-height:290px;
+  img{
+    width:98%;
+    text-align: center;
+    height: auto;
+  }
+  h2{
+    font-size:14px;
+    margin:0;
+    padding:0;
+  }
+}
+
+.detail{
+  img{
+    width:100%;
+    height:auto;
+  }
+}
+
+.scroll-content{
+  padding-bottom:100px;
+}
+
+
+
+
+.transparent {
+  background: rgba(0,0,0,0.7) !important;
+}
+.image-modal {
+  width: 100% !important;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+}
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+}
+
+

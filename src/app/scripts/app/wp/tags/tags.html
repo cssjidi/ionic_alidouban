@@ -1,0 +1,13 @@
+<ion-view view-title="{{vm.title}}">
+    <ion-content>
+        <ion-refresher pulling-text="加载更多" on-refresh="vm.doRefresh()"></ion-refresher>
+
+        <section ng-repeat="rm in vm.messages" ng-click="vm.goDetail(rm.id)" class="half">
+            <img ng-src="{{rm.featured_image_thumbnail_url}}" alt="{{rm.featured_image.title.rendered}}" />
+            <h2>{{rm.title.rendered}}</h2>
+        </section>
+
+        <!-- ion-infinite-scroll 上拉加载数据指令 distance默认1% nf-if的值为false时，就禁止执行on-infinite  -->
+        <ion-infinite-scroll ng-if="!vm.moredata" on-infinite="vm.loadMore()" distance="1%" ></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<ion-view view-title="首页">
+    <ion-content>
+        <!--<section ng-repeat="rm in listIndex" ng-click="goDetail(rm.id)" class="half">-->
+            <!--<img ng-src="{{rm.featured_image_thumbnail_url}}" alt="{{rm.featured_image.title.rendered}}" />-->
+            <!--<h2>{{rm.title.rendered}}</h2>-->
+        <!--</section>-->
+        <!--
+        <section class="list card" ng-repeat="rm in listIndex" ng-click="goDetail(rm.id)" class="item-thumbnail-left">
+            <div class="item item-image">
+                <img ng-src="{{rm.featured_image_thumbnail_url}}" alt="{{rm.featured_image.title.rendered}}" />
+            </div>
+            <div class="item item-body">
+                <p>{{rm.title.rendered}}</p>
+                <p>
+                    <a href="#" class="subdued">赞（{{rm.like}}）</a>
+                    <a href="#" class="subdued">阅读（{{rm.visits}}）</a>
+                </p>
+            </div>
+        </section>
+        -->
+        <!--<ion-infinite-scroll on-infinite="loadMore(page)" distance="5%" icon="ion-loading-c">-->
+        <!--</ion-infinite-scroll>-->
+        <!-- <ion-refresher> 下拉刷新指令  -->
+        <ion-refresher pulling-text="加载更多" on-refresh="vm.doRefresh()"></ion-refresher>
+
+        <section ng-repeat="rm in vm.messages" ng-click="vm.goDetail(rm.id)" class="half">
+            <img ng-src="{{rm.featured_image_thumbnail_url}}" alt="{{rm.featured_image.title.rendered}}" />
+            <h2>{{rm.title.rendered}}</h2>
+        </section>
+
+        <!-- ion-infinite-scroll 上拉加载数据指令 distance默认1% nf-if的值为false时，就禁止执行on-infinite  -->
+        <ion-infinite-scroll ng-if="!vm.moredata" on-infinite="vm.loadMore()" distance="1%" ></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

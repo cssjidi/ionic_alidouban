@@ -1,0 +1,7 @@
+{
+  "name": "阿里豆瓣",
+  "app_id": "",
+  "gulpStartupTasks": [
+      "build"
+    ]
+}

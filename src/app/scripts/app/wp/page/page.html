@@ -1,0 +1,23 @@
+<ion-view view-title="{{ds.title.rendered}}">
+    <ion-content>
+        <div class="detail padding">
+            <h1>
+                {{ds.title.rendered}}
+            </h1>
+            <div class="info">
+                <span class="fl">
+                    {{author}}
+                    {{author_name}}
+                </span>
+                <span class="fr">
+                    {{time}}
+                    {{ds.date| date:'MM/dd/yyyy' }}
+                </span>
+            </div>
+            <div class="clearfix"></div>
+            <div class="content" ng-bind-html="ds.content.rendered">
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

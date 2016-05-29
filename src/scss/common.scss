@@ -1,0 +1,67 @@
+//float
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+
+//display
+.db{
+  display: block;
+}
+.dib{
+  display:inline-block;
+}
+.dt{
+  display: table;
+}
+.dtc{
+  display: table-cell;
+}
+.df{
+  display: flex;
+}
+.dif{
+  display: inline-flex;
+}
+.dn{
+  display: none;
+}
+
+//clearfix
+.clearfix{
+  @include clearfix;
+}
+
+//position
+.pr{
+  position:relative;
+}
+.pa{
+  position:absolute;
+}
+.pf{
+  position: fixed;
+}
+
+
+//center
+.tal{
+  text-align:left;
+}
+.tac{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.tar{
+  text-align:right;
+}
+
+
+//color
+.cwhite{
+  color:#fff;
+}
+

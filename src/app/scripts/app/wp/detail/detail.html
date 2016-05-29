@@ -1,0 +1,43 @@
+<ion-view view-title="{{ds.title.rendered}}">
+    <ion-content>
+        <div class="detail padding">
+            <h1>
+                {{ds.title.rendered}}
+            </h1>
+            <div class="info">
+                <span class="fl">
+                    {{author}}
+                    {{ds.author_name}}
+                </span>
+                <span class="fr">
+                    {{time}}
+                    {{ds.date| date:'MM/dd/yyyy' }}
+                </span>
+            </div>
+            <div class="clearfix"></div>
+            <div class="tags">
+                {{tags_title}}
+                <a ng-click="goTag(tag.name)" class="button button-small button-default" ng-repeat="tag in tags">{{tag.name}}</a>
+            </div>
+            <div class="content">
+                <div class="half-img" ng-repeat="img in ds['img_content']">
+                    <a class="box" id="{{$index}}" ng-click="openModal($index)">
+                        <img ng-src="{{img}}" width="100%" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script id="image-modal.html" type="text/ng-template">
+            <div class="modal image-modal transparent" ng-click="closeModal()">
+                <ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false">
+                    <ion-slide ng-repeat="oImage in ds['img_content']">
+
+                            <img ng-src="{{oImage}}" class="fullscreen-image" />
+
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+        </script>
+    </ion-content>
+
+</ion-view>
